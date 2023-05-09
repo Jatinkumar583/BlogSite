@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pyB/ePhGrzCE9K+SpLrYsAnHEh4L53XbV+U3fvLzdxN1fBGQiTVOB/S0tMmbFcrGmJQ+Vqx7YP7BYDuzQE2LVg==",
+  "dgSpecHash": "kECyCSwGSScGyLqw43kiC/w3LJFBVygawOuGYk0wFZFgr87Fhc4nugOtwg52YxWsXlxdG2IMwmqnhZuZ7Aphhw==",
   "success": true,
-  "projectFilePath": "D:\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
+  "projectFilePath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

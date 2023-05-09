@@ -105,11 +105,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
+      "projectUniqueName": "D:\\BlogSite\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
       "projectName": "BlogSiteAPIGateway",
-      "projectPath": "D:\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
+      "projectPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\BlogSiteWebAPI\\BlogSiteAPIGateway\\obj\\",
+      "outputPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogSiteAPIGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

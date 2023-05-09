@@ -1058,11 +1058,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BlogSiteWebAPI\\BlogInfoService\\BlogInfoService.csproj",
+      "projectUniqueName": "D:\\BlogSite\\BlogSiteWebAPI\\BlogInfoService\\BlogInfoService.csproj",
       "projectName": "BlogInfoService",
-      "projectPath": "D:\\BlogSiteWebAPI\\BlogInfoService\\BlogInfoService.csproj",
+      "projectPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogInfoService\\BlogInfoService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\BlogSiteWebAPI\\BlogInfoService\\obj\\",
+      "outputPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogInfoService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

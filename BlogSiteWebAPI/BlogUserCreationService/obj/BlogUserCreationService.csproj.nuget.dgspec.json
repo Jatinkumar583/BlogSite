@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj": {}
+    "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj": {}
   },
   "projects": {
-    "D:\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj": {
+    "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
+        "projectUniqueName": "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
         "projectName": "BlogUserCreationService",
-        "projectPath": "D:\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
+        "projectPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\BlogUserCreationService.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\BlogSiteWebAPI\\BlogUserCreationService\\obj\\",
+        "outputPath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogUserCreationService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

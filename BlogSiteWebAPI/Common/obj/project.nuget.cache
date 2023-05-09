@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3LqSUU/on5+c93xTFrYxUDHTuPvVocm/3LVfsifjhv0L/Ywr9MHeH24kFGtcECtWAiITpjGQ6durzmyTmPWbdQ==",
+  "dgSpecHash": "/3XQFfNTnhrqKUicfxnYMS2FXdIsPkSyEbgp0dZ80ZCNfAj0mdP/L+vAqi19+z21rSxgu6NU9y08D4eq6N7luQ==",
   "success": true,
-  "projectFilePath": "D:\\BlogSiteWebAPI\\Common\\Common.csproj",
+  "projectFilePath": "D:\\BlogSite\\BlogSiteWebAPI\\Common\\Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

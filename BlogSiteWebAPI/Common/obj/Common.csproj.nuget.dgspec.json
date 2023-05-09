@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BlogSiteWebAPI\\Common\\Common.csproj": {}
+    "D:\\BlogSite\\BlogSiteWebAPI\\Common\\Common.csproj": {}
   },
   "projects": {
-    "D:\\BlogSiteWebAPI\\Common\\Common.csproj": {
+    "D:\\BlogSite\\BlogSiteWebAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BlogSiteWebAPI\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\BlogSite\\BlogSiteWebAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\BlogSiteWebAPI\\Common\\Common.csproj",
+        "projectPath": "D:\\BlogSite\\BlogSiteWebAPI\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\BlogSiteWebAPI\\Common\\obj\\",
+        "outputPath": "D:\\BlogSite\\BlogSiteWebAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

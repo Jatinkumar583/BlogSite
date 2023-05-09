@@ -12,68 +12,51 @@ namespace BlogInfoService.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IUserRegistrationService _userRegistrationService;
-        public BlogUpdateController(IConfiguration configuration, IUserRegistrationService userRegistrationService)
+        private readonly IBlogDetailsService _blogDetailsService;
+        public BlogUpdateController(IConfiguration configuration, IUserRegistrationService userRegistrationService, IBlogDetailsService blogDetailsService)
         {
             _configuration = configuration;
-            _userRegistrationService= userRegistrationService;
-           //var client = new MongoClient(_configuration["ConnectionString"]);
-           //var dB = client.GetDatabase("BlogSite");
-           // dB.GetCollection("tbl");
-           //collection
-
+            _userRegistrationService = userRegistrationService;
+            _blogDetailsService = blogDetailsService;
         }
         [HttpPost("user/blogs/add/{blogname}")]
-        public IActionResult AddBlog()
+        public IActionResult AddBlog(BlogDetails blogDetails)
         {
             try
             {
-                var client = new MongoClient(_configuration["ConnectionString"]);
-                var dB = client.GetDatabase("BlogSite");
-                //if (bookingDetail != null)
-                //{
-                //    int bookStatus = _ticketBooking.BookFlight(bookingDetail);
-                //    if (bookStatus == 1)
-                //    {
-                //        return Ok("Flight Booked Successfully.");
-                //    }
-                //    else
-                //    {
-                //        return BadRequest("Flight Not Booked.");
-                //    }
-                //}
-                return BadRequest();
+                if (blogDetails != null)
+                {
+                    int bookStatus = _blogDetailsService.AddBlog(blogDetails);
+                    if (bookStatus == 1)
+                    {
+                        return Ok("Blog added successfully.");
+                    }
+                    else
+                    {
+                        return BadRequest("Blog not added.");
+                    }
+                }
+                return BadRequest("Blog not added.");
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
 
         }
 
         [HttpDelete("user/delete/{blogname}")]
-        public IActionResult DeleteBlog(string blogname)
+        public IActionResult DeleteBlog(int blogId)
         {
             try
             {
-                //if (bookingDetail != null)
-                //{
-                //    int bookStatus = _ticketBooking.BookFlight(bookingDetail);
-                //    if (bookStatus == 1)
-                //    {
-                //        return Ok("Flight Booked Successfully.");
-                //    }
-                //    else
-                //    {
-                //        return BadRequest("Flight Not Booked.");
-                //    }
-                //}
-                return BadRequest();
+                _blogDetailsService.DeleteBlog(blogId);
+                return Ok("Blog delete successfully.");
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
-
         }
 
         [HttpGet("user/blog/alluser")]

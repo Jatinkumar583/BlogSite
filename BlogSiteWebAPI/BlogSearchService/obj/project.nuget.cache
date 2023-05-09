@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "697Rhxxie4bXxC0vcVUxbDZsATxZx6Hjy3g1yj+PmRnHFm22o/jyfvQcB5t29dZKig+cXxIdYH5JOQQrjuIl+w==",
+  "dgSpecHash": "1pKPUqEzDYKFhbFC2h+MP2ZGtxStW+JnPW4BvCAvpu1F4HB1kGEUk3k/Tbv8Qvqf2mrI+VlDLa08vKgX93lf7g==",
   "success": true,
-  "projectFilePath": "D:\\BlogSiteWebAPI\\BlogSearchService\\BlogSearchService.csproj",
+  "projectFilePath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogSearchService\\BlogSearchService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

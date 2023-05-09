@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9iTqErvvPSILERRFR59Bk4eocPX1L1olc488cR21JfI+M4KkACVKSk59qeFDBSvGlA3HvSf6igVO7wxAztxysw==",
+  "dgSpecHash": "L8EZbWxj5PfNINrPCFpCQw1LkHw8LHDLucBlkqSwbXF6KKrhZijNfncTA1gp8Ynl0ic93ffBaah/ujhY3Bn1MQ==",
   "success": true,
-  "projectFilePath": "D:\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
+  "projectFilePath": "D:\\BlogSite\\BlogSiteWebAPI\\BlogSiteAPIGateway\\BlogSiteAPIGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
   ],
