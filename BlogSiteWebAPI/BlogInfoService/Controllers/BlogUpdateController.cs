@@ -19,15 +19,16 @@ namespace BlogInfoService.Controllers
             _userRegistrationService = userRegistrationService;
             _blogDetailsService = blogDetailsService;
         }
-        [HttpPost("user/blogs/add/{blogname}")]
+        //[HttpPost("user/blogs/add/{blogname}")]
+        [HttpPost("user/blogs/add")]
         public IActionResult AddBlog(BlogDetails blogDetails)
         {
             try
             {
                 if (blogDetails != null)
                 {
-                    int bookStatus = _blogDetailsService.AddBlog(blogDetails);
-                    if (bookStatus == 1)
+                    int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
+                    if (addBlogStatus == 1)
                     {
                         return Ok("Blog added successfully.");
                     }
@@ -45,13 +46,21 @@ namespace BlogInfoService.Controllers
 
         }
 
-        [HttpDelete("user/delete/{blogname}")]
+        //[HttpDelete("user/delete/{blogname}")]
+        [HttpDelete("user/delete")]
         public IActionResult DeleteBlog(int blogId)
         {
             try
             {
-                _blogDetailsService.DeleteBlog(blogId);
-                return Ok("Blog delete successfully.");
+                int deleteStatus = _blogDetailsService.DeleteBlog(blogId);
+                if (deleteStatus == 1)
+                {
+                    return Ok("Blog delete successfully.");
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
             catch (Exception ex)
             {
@@ -59,18 +68,18 @@ namespace BlogInfoService.Controllers
             }
         }
 
-        [HttpGet("user/blog/alluser")]
-        public ActionResult<List<UserRegistration>> GetAllUsers()
-        {
-            try
-            {
-                return Ok(_userRegistrationService.GetAllUsers());
-            }
-            catch
-            {
-                return BadRequest();
-            }
+        //[HttpGet("user/blog/alluser")]
+        //public ActionResult<List<UserRegistration>> GetAllUsers()
+        //{
+        //    try
+        //    {
+        //        return Ok(_userRegistrationService.GetAllUsers());
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
 
-        }
+        //}
     }
 }

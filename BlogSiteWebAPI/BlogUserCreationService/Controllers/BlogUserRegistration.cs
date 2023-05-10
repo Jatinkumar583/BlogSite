@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BlogUserCreationService.Models;
+using BlogUserCreationService.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogUserCreationService.Controllers
@@ -7,24 +9,31 @@ namespace BlogUserCreationService.Controllers
     [ApiController]
     public class BlogUserRegistration : ControllerBase
     {
+        private readonly IConfiguration _configuration;
+        private readonly IUserRegistrationService _userRegistrationService;
+        public BlogUserRegistration(IConfiguration configuration, IUserRegistrationService userRegistrationService)
+        {
+            _configuration = configuration;
+            _userRegistrationService = userRegistrationService;
+        }    
         [HttpPost("user/register")]
-        public IActionResult BlogUserRegister()
+        public IActionResult BlogUserRegister(UserRegistration userRegistration)
         {
             try
             {
-                //if (bookingDetail != null)
-                //{
-                //    int bookStatus = _ticketBooking.BookFlight(bookingDetail);
-                //    if (bookStatus == 1)
-                //    {
-                //        return Ok("Flight Booked Successfully.");
-                //    }
-                //    else
-                //    {
-                //        return BadRequest("Flight Not Booked.");
-                //    }
-                //}
-                return BadRequest();
+                if (userRegistration != null)
+                {
+                    int addUser = _userRegistrationService.AddUser(userRegistration);
+                    if (addUser == 1)
+                    {
+                        return Ok("User added successfully.");
+                    }
+                    else
+                    {
+                        return BadRequest("User not added.");
+                    }
+                }
+                return BadRequest("User not added.");
             }
             catch
             {

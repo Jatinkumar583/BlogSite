@@ -3,10 +3,11 @@ using MongoDB.Bson;
 
 namespace BlogInfoService.Models
 {
+    [BsonIgnoreExtraElements]
     public class BlogDetails
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        //[BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; } = string.Empty;
 
         [BsonElement("blogId")]
