@@ -40,6 +40,12 @@ D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\BlogUserCrea
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\AWSSDK.Core.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\DnsClient.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\MongoDB.Bson.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\MongoDB.Driver.dll
@@ -50,6 +56,7 @@ D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Snappier.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\ZstdSharp.dll
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib

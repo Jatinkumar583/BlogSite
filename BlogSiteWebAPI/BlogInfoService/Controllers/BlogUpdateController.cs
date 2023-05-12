@@ -1,11 +1,13 @@
 ﻿using BlogInfoService.Models;
 using BlogInfoService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace BlogInfoService.Controllers
 {
+    [Authorize]
     [Route("api/v1.0/blogsite")]
     [ApiController]
     public class BlogUpdateController : ControllerBase
