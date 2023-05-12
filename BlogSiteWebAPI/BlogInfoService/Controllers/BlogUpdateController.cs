@@ -11,12 +11,10 @@ namespace BlogInfoService.Controllers
     public class BlogUpdateController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly IUserRegistrationService _userRegistrationService;
         private readonly IBlogDetailsService _blogDetailsService;
-        public BlogUpdateController(IConfiguration configuration, IUserRegistrationService userRegistrationService, IBlogDetailsService blogDetailsService)
+        public BlogUpdateController(IConfiguration configuration, IBlogDetailsService blogDetailsService)
         {
             _configuration = configuration;
-            _userRegistrationService = userRegistrationService;
             _blogDetailsService = blogDetailsService;
         }
         //[HttpPost("user/blogs/add/{blogname}")]
@@ -68,18 +66,5 @@ namespace BlogInfoService.Controllers
             }
         }
 
-        //[HttpGet("user/blog/alluser")]
-        //public ActionResult<List<UserRegistration>> GetAllUsers()
-        //{
-        //    try
-        //    {
-        //        return Ok(_userRegistrationService.GetAllUsers());
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //}
     }
 }

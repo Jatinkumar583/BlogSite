@@ -1,6 +1,19 @@
+using BlogSearchService.Models;
+using BlogSearchService.Services;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<BlogStoreDBSetting>(builder.Configuration.GetSection(nameof(BlogStoreDBSetting)));
+
+builder.Services.AddSingleton<IBlogStoreDBSetting>(sp => sp.GetRequiredService<IOptions<BlogStoreDBSetting>>().Value);
+
+builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configuration.GetValue<string>("BlogStoreDBSetting:ConnectionString")));
+
+builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
+builder.Services.AddScoped<IBlogDetailsService, BlogDetailsService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

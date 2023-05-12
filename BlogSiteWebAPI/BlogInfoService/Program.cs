@@ -13,7 +13,6 @@ builder.Services.AddSingleton<IBlogStoreDBSetting>(sp=>sp.GetRequiredService<IOp
 
 builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configuration.GetValue<string>("BlogStoreDBSetting:ConnectionString")) );
 
-builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
 builder.Services.AddScoped<IBlogDetailsService, BlogDetailsService>();
 
 builder.Services.AddControllers();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BlogSearchService.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSearchService.Controllers
@@ -7,16 +8,30 @@ namespace BlogSearchService.Controllers
     [ApiController]
     public class BlogSearchController : ControllerBase
     {
+        private readonly IBlogDetailsService _blogDetailsService; 
+        private readonly IUserRegistrationService _userRegistrationService;
+        public BlogSearchController(IBlogDetailsService blogDetailsService, IUserRegistrationService userRegistrationService)
+        {
+            _blogDetailsService = blogDetailsService;
+            _userRegistrationService = userRegistrationService;
+        }
         [HttpGet("blogs/info/{category}")]
         public IActionResult GetBlogsByCategory(string category)
         {
             try
             {
-                return Ok();
+                if (category!=null)
+                {
+                    return Ok(_blogDetailsService.GetAllBlogsByCategory(category));
+                }
+                else
+                {
+                    return BadRequest();
+                }                
             }
-            catch
+            catch(Exception ex) 
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -25,11 +40,11 @@ namespace BlogSearchService.Controllers
         {
             try
             {
-                return Ok();
+                return Ok(_userRegistrationService.GetAllUsers());
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
     }
