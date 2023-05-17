@@ -1,10 +1,12 @@
 ﻿using BlogUserCreationService.Models;
 using BlogUserCreationService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogUserCreationService.Controllers
 {
+    [Authorize]
     [Route("api/v1.0/blogsite")]
     [ApiController]
     public class BlogUserRegistration : ControllerBase

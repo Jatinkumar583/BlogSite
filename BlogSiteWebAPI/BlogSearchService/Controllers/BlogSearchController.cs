@@ -1,9 +1,11 @@
 ﻿using BlogSearchService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSearchService.Controllers
 {
+    [Authorize]
     [Route("api/v1.0/blogsite")]
     [ApiController]
     public class BlogSearchController : ControllerBase

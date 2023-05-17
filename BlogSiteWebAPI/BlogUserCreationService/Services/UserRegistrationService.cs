@@ -20,7 +20,7 @@ namespace BlogUserCreationService.Services
                 _userRegCollection.InsertOne(userRegistration);
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }            

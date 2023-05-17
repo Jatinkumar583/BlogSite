@@ -75,3 +75,10 @@ D:\BlogSite\BlogSiteWebAPI\BlogSearchService\obj\Debug\net6.0\refint\BlogSearchS
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\obj\Debug\net6.0\BlogSearchService.pdb
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\obj\Debug\net6.0\BlogSearchService.genruntimeconfig.cache
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\obj\Debug\net6.0\ref\BlogSearchService.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
