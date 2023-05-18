@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/booking/history/{emailId}",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightBookService",
+      "UpstreamPathTemplate": "/api/gatway/flight/booking/history/{emailId}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }    
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
+  }
+}

@@ -6,8 +6,8 @@ namespace BlogUserCreationService.Models
     [BsonIgnoreExtraElements]
     public class UserRegistration
     {
-        [BsonId]
-        //[BsonRepresentation(BsonType.ObjectId)]
+        //[BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; } = string.Empty;
         public int UserId { get; set; }
 

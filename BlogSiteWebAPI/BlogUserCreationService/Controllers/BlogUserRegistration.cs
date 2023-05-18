@@ -25,6 +25,10 @@ namespace BlogUserCreationService.Controllers
             {
                 if (userRegistration != null)
                 {
+                    if (string.IsNullOrEmpty(userRegistration.Id))
+                    {
+                        userRegistration.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+                    }
                     int addUser = _userRegistrationService.AddUser(userRegistration);
                     if (addUser == 1)
                     {
