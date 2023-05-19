@@ -1,5 +1,6 @@
 using BlogUserCreationService.Models;
 using BlogUserCreationService.Services;
+using Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -38,6 +39,7 @@ builder.Services.AddAuthentication(x =>
     };
 });
 builder.Services.AddScoped<IJWTManagerRepository, JWTManagerRepository>();
+builder.Services.AddConsulConfig(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -80,9 +82,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseConsul(builder.Configuration);
+app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

@@ -83,9 +83,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseConsul(builder.Configuration);
+app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
