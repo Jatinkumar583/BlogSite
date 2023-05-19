@@ -82,3 +82,11 @@ D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\obj\Debug\net6.0\refint\BlogU
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\obj\Debug\net6.0\BlogUserCreationService.pdb
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\obj\Debug\net6.0\BlogUserCreationService.genruntimeconfig.cache
 D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\obj\Debug\net6.0\ref\BlogUserCreationService.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Consul.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Common.dll
+D:\BlogSite\BlogSiteWebAPI\BlogUserCreationService\bin\Debug\net6.0\Common.pdb

@@ -60,3 +60,16 @@ D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\refint\BlogSiteAP
 D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\BlogSiteAPIGateway.pdb
 D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\BlogSiteAPIGateway.genruntimeconfig.cache
 D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\ref\BlogSiteAPIGateway.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\ocelot.json
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Consul.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\FluentValidation.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Ocelot.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\bin\Debug\net6.0\Ocelot.Provider.Consul.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\BlogSiteAPIGateway.MvcApplicationPartsAssemblyInfo.cs
+D:\BlogSite\BlogSiteWebAPI\BlogSiteAPIGateway\obj\Debug\net6.0\BlogSiteAPIGateway.csproj.CopyComplete

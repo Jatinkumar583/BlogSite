@@ -82,3 +82,11 @@ D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.Identity
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Consul.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Common.dll
+D:\BlogSite\BlogSiteWebAPI\BlogSearchService\bin\Debug\net6.0\Common.pdb

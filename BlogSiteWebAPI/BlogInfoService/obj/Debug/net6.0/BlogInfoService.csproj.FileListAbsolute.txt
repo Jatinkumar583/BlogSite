@@ -95,3 +95,11 @@ D:\BlogSite\BlogSiteWebAPI\BlogInfoService\obj\Debug\net6.0\refint\BlogInfoServi
 D:\BlogSite\BlogSiteWebAPI\BlogInfoService\obj\Debug\net6.0\BlogInfoService.pdb
 D:\BlogSite\BlogSiteWebAPI\BlogInfoService\obj\Debug\net6.0\BlogInfoService.genruntimeconfig.cache
 D:\BlogSite\BlogSiteWebAPI\BlogInfoService\obj\Debug\net6.0\ref\BlogInfoService.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Consul.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Common.dll
+D:\BlogSite\BlogSiteWebAPI\BlogInfoService\bin\Debug\net6.0\Common.pdb

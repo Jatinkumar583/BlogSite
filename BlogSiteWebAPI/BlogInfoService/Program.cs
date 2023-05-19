@@ -1,6 +1,8 @@
 using BlogInfoService.Models;
 using BlogInfoService.Services;
+using Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -39,7 +41,7 @@ builder.Services.AddAuthentication(x =>
     };
 });
 builder.Services.AddScoped<IJWTManagerRepository, JWTManagerRepository>();
-
+builder.Services.AddConsulConfig(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -84,7 +86,12 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+app.UseRouting();
+app.UseConsul(builder.Configuration);
 app.MapControllers();
 
 app.Run();

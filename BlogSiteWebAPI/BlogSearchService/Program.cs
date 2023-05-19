@@ -1,5 +1,6 @@
 using BlogSearchService.Models;
 using BlogSearchService.Services;
+using Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -39,7 +40,7 @@ builder.Services.AddAuthentication(x =>
     };
 });
 builder.Services.AddScoped<IJWTManagerRepository, JWTManagerRepository>();
-
+builder.Services.AddConsulConfig(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
