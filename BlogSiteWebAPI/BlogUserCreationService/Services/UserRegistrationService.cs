@@ -56,6 +56,10 @@ namespace BlogUserCreationService.Services
         {
             return _userRegCollection.Find(user => user.UserId == userId).FirstOrDefault();
         }
+        public UserRegistration GetUserInfo(User userDetails)
+        {
+            return _userRegCollection.Find(x => x.EmailId == userDetails.UserName).FirstOrDefault();
+        }
 
         public void UpdateUserDetail(int userId, UserRegistration userRegistration)
         {

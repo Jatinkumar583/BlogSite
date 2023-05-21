@@ -8,9 +8,14 @@
                 <div class="card-body">
                     <div class="form">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Name</label>
+                            <label for="exampleInputEmail1">First Name</label>
                             <input type="text" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter Name" [(ngModel)]="registerUserData.userName" required>
+                                placeholder="Enter Name" [(ngModel)]="registerUserData.firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Last Name</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp"
+                                placeholder="Enter Name" [(ngModel)]="registerUserData.lastName" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">EmailId</label>

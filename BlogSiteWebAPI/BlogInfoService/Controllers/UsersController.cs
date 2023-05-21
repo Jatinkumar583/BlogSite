@@ -30,26 +30,6 @@ namespace BlogInfoService.Controllers
             return Ok(token);
         }
 
-        //[AllowAnonymous]
-        //[HttpPost]
-        //[Route("register")]
-        //public IActionResult UserRegistration(UserRegistDetails userdata)
-        //{
-        //    _userRegistration.RegisterUser(userdata);
-        //    return Ok();
-        //}
-
-        //[AllowAnonymous]
-        //[HttpPost]
-        //[Route("getuserdetails")]
-        //public IActionResult GetUserDetails(User user)
-        //{
-        //    if (user != null)
-        //    {
-        //        return Ok(_userRegistration.GetUserDetails(user));
-        //    }
-        //    return BadRequest();
-
-        //}
+        
     }
 }

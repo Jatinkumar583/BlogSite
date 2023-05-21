@@ -21,8 +21,8 @@ export class LoginComponent {
     GetLoginUserDetails(){
       this._auth.loginUserDetails(this.loginUserData).subscribe(res => {      
         localStorage.setItem('usertype', res.loginType);
-        localStorage.setItem('userid', res.id);
-        localStorage.setItem('username', res.userName);
+        localStorage.setItem('userid', res.userId);
+        localStorage.setItem('username', res.firstName+" "+res.lastName);
         localStorage.setItem('emailId', res.emailId);      
       },
         err => console.log(err)); 
@@ -33,11 +33,11 @@ export class LoginComponent {
      
 		  if(localStorage.getItem('usertype')==='admin'){
         console.log("hit 1")
-        this._router.navigate(['/manageinventory'])
+       // this._router.navigate(['/manageinventory'])
       }
       else if(localStorage.getItem('usertype')==='user'){
         console.log("hit 2")
-        this._router.navigate(['/flightsearch'])
+       // this._router.navigate(['/flightsearch'])
       }     
     }
 }

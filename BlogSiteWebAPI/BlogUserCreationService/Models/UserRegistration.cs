@@ -9,6 +9,8 @@ namespace BlogUserCreationService.Models
         //[BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; } = string.Empty;
+
+        [BsonElement("userId")]
         public int UserId { get; set; }
 
         [BsonElement("firstName")]

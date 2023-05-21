@@ -11,10 +11,11 @@ namespace BlogUserCreationService.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IJWTManagerRepository iJWTManager;
-
-        public UsersController(IJWTManagerRepository jWTManager)
+        private readonly IUserRegistrationService _userRegistrationService;
+        public UsersController(IJWTManagerRepository jWTManager,IUserRegistrationService userRegistrationService)
         {
             iJWTManager = jWTManager;
+            _userRegistrationService= userRegistrationService;
         }
 
         [AllowAnonymous]
@@ -28,6 +29,34 @@ namespace BlogUserCreationService.Controllers
                 return Unauthorized();
             }
             return Ok(token);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("register")]
+        public IActionResult UserRegistration(UserRegistration userdata)
+        {
+            userdata.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            userdata.UserId= Convert.ToInt32(DateTime.UtcNow.Day+DateTime.UtcNow.Month+DateTime.UtcNow.Year+DateTime.UtcNow.Hour+
+                DateTime.UtcNow.Minute+DateTime.UtcNow.Second);
+            //userdata.UserId= Convert.ToInt32(DateTime.UtcNow.day);
+            userdata.CreatedBy= userdata.UserId;
+            userdata.CreatedOn= DateTime.UtcNow;
+            _userRegistrationService.AddUser(userdata);
+            return Ok();
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("getuserdetails")]
+        public IActionResult GetUserDetails(User user)
+        {
+            if (user != null)
+            {
+                return Ok(_userRegistrationService.GetUserInfo(user));
+            }
+            return BadRequest();
+
         }
     }
 }

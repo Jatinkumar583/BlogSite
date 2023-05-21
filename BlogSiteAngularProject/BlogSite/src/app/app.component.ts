@@ -7,7 +7,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FlightBooking';
+  title = 'BlogSite';
   UserSection:boolean=true;
   AdminSection:boolean=false;
   constructor(private _authService:AuthService) {
