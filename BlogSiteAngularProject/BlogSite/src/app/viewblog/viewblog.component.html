@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="new-card-title">View Blogs</h5>
+        <form #searchFlight="ngForm" class="row g-3 needs-validation" novalidate>
+            <div *ngFor="let item of blogRecords">
+                <div class="container">
+                    <div class="card bg-secondary text-white">
+                        <div class="col-md-12">
+                            <label class="form-label" >Blog Name: {{item.blogName}}</label>&nbsp;
+                            <label class="form-label" >Author Name: {{item.authorName}}</label>  &nbsp;
+                            <label class="form-label" >Category: {{item.category}}</label>  
+                        </div> 
+                        <div class="col-md-12">
+                            <label class="form-label" >Article:</label>
+                            <p class="form-label" >{{item.article}}</p>
+                        </div> 
+                    </div>
+                    <br>
+                </div>
+            </div>
+            
+            <!-- <div class="col-md-3">
+              <label for="validationCustom01" class="form-label" >From Place</label>
+              <input type="text" class="form-control" id="validationCustom01" name="txtFromPlace" ngModel required>      
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom02" class="form-label" >To Place</label>
+              <input type="text" class="form-control" id="validationCustom02" name="txtToPlace" ngModel required>     
+            </div>
+         
+            <div class="col-md-3" hidden>
+              <label for="validationCustom03" class="form-label" >Date</label>
+              <input type="text" class="form-control" id="validationCustom03" name="txtBoardingDate" ngModel required>     
+            </div>
+           
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Flight Number</label>
+              <input type="text" class="form-control" id="validationCustom05"  name="txtFlightNumber" ngModel required>     
+            </div> -->
+            <!-- <div class="col-new-md">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div> -->
+        </form>
+    </div>
+</div>

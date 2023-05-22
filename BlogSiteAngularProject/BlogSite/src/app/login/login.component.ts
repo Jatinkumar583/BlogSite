@@ -37,7 +37,7 @@ export class LoginComponent {
       }
       else if(localStorage.getItem('usertype')==='user'){
         console.log("hit 2")
-       // this._router.navigate(['/flightsearch'])
+        this._router.navigate(['/viewblog'])
       }     
     }
 }

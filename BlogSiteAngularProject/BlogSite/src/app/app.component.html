@@ -9,11 +9,21 @@
           <a class="nav-link" routerLink="/events" href="#">Events <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/flightsearch" *ngIf="UserSection" href="#">Search Blog </a>
+          <a class="nav-link" routerLink="/viewblog" *ngIf="UserSection" href="#">View Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/bookinghistory" *ngIf="UserSection" href="#">Booking History</a>
+          <a class="nav-link" routerLink="/createblog" *ngIf="UserSection" href="#">Create Blog</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/searchblog" *ngIf="UserSection" href="#">Search Blog </a>
+        </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" routerLink="/flightsearch" *ngIf="UserSection" href="#">Search Blog </a>
+        </li> -->       
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/bookinghistory" *ngIf="UserSection" href="#">Booking History</a>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/manageairlines" *ngIf="AdminSection" href="#">Adminstraion</a>
         </li>

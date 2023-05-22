@@ -12,6 +12,10 @@ export class EventService {
     constructor(private http: HttpClient, private _router: Router) {
 
     }
+    GetBlogsByUserIdList(blogCategoryId:string) {
+        console.log("hit the method");
+        return this.http.get<any>("https://localhost:7032/api/v1.0/blogsite/blogs/info/"+blogCategoryId+"");
+    }
     saveNewAirline(data: any) {
         return this.http.post("http://localhost:64350/api/v1.0/flight/airline/register", data);
     }
