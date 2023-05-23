@@ -37,6 +37,19 @@ namespace BlogSearchService.Controllers
             }
         }
 
+        [HttpGet("blogs/user/{userId}")]
+        public IActionResult GetBlogsByUserId(int userId)
+        {
+            try
+            {
+                return Ok(_blogDetailsService.GetAllBlogsByUserId(userId));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("user/getall")]
         public IActionResult GetAllBlogUsers()
         {

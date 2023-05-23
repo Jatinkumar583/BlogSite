@@ -10,6 +10,14 @@
     },
     {
       "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/blogsite/blogs/user/{userId}",
+      "DownstreamScheme": "http",
+      "ServiceName": "blogSearchService",
+      "UpstreamPathTemplate": "/api/gatway/blogsite/blogs/user/{userId}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1.0/blogsite/user/getall",
       "DownstreamScheme": "http",
       "ServiceName": "blogSearchService",

@@ -1,1 +1,57 @@
-<p>searchblog works!</p>
+<div class="card">  
+    <div class="card-body">
+      <h5 class="new-card-title" >Search Blog</h5>
+        <form  #searchBlog="ngForm" (ngSubmit)="GetBlogCategory(searchBlog.value)" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-9">
+              <label for="validationCustom01" class="form-label" >Enter Category</label>
+              <input type="text" class="form-control" id="validationCustom01" name="txtBlogCategory" ngModel required>      
+            </div>
+            <!-- <div class="col-md-3">
+              <label for="validationCustom02" class="form-label" >To Place</label>
+              <input type="text" class="form-control" id="validationCustom02" name="txtToPlace" ngModel required>     
+            </div>
+         
+            <div class="col-md-3" hidden>
+              <label for="validationCustom03" class="form-label" >Date</label>
+              <input type="text" class="form-control" id="validationCustom03" name="txtBoardingDate" ngModel required>     
+            </div>
+           
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Flight Number</label>
+              <input type="text" class="form-control" id="validationCustom05"  name="txtFlightNumber" ngModel required>     
+            </div> -->
+            <div class="col-new-md">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+          </form>
+    </div>
+  </div>
+<hr>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+    <div class="card">
+        <div class="body table-responsive">
+            <table class="table table-condensed">
+                <thead class="thead">
+                    <tr>
+                        <th>Blog Name</th>
+                        <th>Category</th>
+                        <th>Author Name</th>
+                        <th>CreatedOn</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-green" *ngFor="let item of blogRecords">
+                        <td>{{item.blogName}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{item.authorName}}</td>
+                        <td>{{item.createdOn}}</td>
+                        <td><button class="btn btn-primary" (click)="GoToBookFlight(item)" type="submit">View Details</button></td>                     
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+  

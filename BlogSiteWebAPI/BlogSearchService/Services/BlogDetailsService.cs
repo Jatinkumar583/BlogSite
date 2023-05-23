@@ -17,5 +17,9 @@ namespace BlogSearchService.Services
         {
             return _blogDetails.Find(blogs => blogs.Category==category).ToList();
         }
+        public List<BlogDetails> GetAllBlogsByUserId(int userId)
+        {
+            return _blogDetails.Find(blogs => blogs.CreatedBy == userId).ToList();
+        }
     }
 }

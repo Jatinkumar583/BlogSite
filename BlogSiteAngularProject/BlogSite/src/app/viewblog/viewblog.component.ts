@@ -13,15 +13,7 @@ export class ViewblogComponent implements OnInit {
   constructor(private _eventService: EventService, private _router: Router) { }
 
   ngOnInit(): void {
-    this._eventService.GetBlogsByUserIdList("BlognewCategory").subscribe(res => this.blogRecords = res, err => (console.log(err),this._router.navigate(['/login'])));
+    this._eventService.GetBlogsByUserIdList(localStorage.getItem('userid')).subscribe(res => this.blogRecords = res, err => (console.log(err),this._router.navigate(['/login'])));
     console.log(this.blogRecords);
   }
-  // GetScheduleFlights() {
-  //   this._eventService.GetBlogsByUserIdList("BlognewCategory").subscribe(res => this.blogRecords = res, err => (console.log(err),this._router.navigate(['/login'])));
-  //   // this.filteredRecord = this.SearchAirlineList.filter(function (item) {
-  //   //   return item.fromPlace == data.txtFromPlace || item.toPlace == data.txtToPlace || item.startDateTime==data.txtBoardingDate || item.flightNumber==data.txtFlightNumber;
-  //   // });
-  //   console.log(this.blogRecords);
-   
-  // }
 }
