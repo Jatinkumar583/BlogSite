@@ -17,8 +17,12 @@ export class EventService {
         return this.http.get<any>("https://localhost:7032/api/v1.0/blogsite/blogs/user/"+userId+"");
     }
     GetBlogsByCategory(category:string) {
-        console.log("hit the method");
+        
         return this.http.get<any>("https://localhost:7032/api/v1.0/blogsite/blogs/info/"+category+"");
+    }
+    SaveNewBlog(data:any){
+        console.log("hit the save method");
+        return this.http.post("https://localhost:7039/api/v1.0/blogsite/user/blogs/add",data);
     }
     saveNewAirline(data: any) {
         return this.http.post("http://localhost:64350/api/v1.0/flight/airline/register", data);
