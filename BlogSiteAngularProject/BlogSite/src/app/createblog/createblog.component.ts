@@ -18,9 +18,10 @@ import { FilterPanelService } from '../services/filterpanel';
 })
 export class CreateblogComponent implements OnInit {
   //flightDetai
-  tblShow: boolean = false;
-  filteredRecord: Array<AirlineInventory> = new Array<AirlineInventory>();
-  SearchAirlineList: Array<AirlineInventory> = new Array<AirlineInventory>();
+  blogUserDetails: blogdetails = new blogdetails();
+  //tblShow: boolean = false;
+  //filteredRecord: Array<AirlineInventory> = new Array<AirlineInventory>();
+  //SearchAirlineList: Array<AirlineInventory> = new Array<AirlineInventory>();
   constructor(private _eventService: EventService, private _router: Router,public filterPanelService:FilterPanelService) {
 
   }
@@ -28,18 +29,39 @@ export class CreateblogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  PostBlogDetails(data: any) {
-    this._eventService.SaveNewBlog().subscribe(res => this.SearchAirlineList = res, err => (console.log(err),this._router.navigate(['/login'])));
-    this.filteredRecord = this.SearchAirlineList.filter(function (item) {
-      return item.fromPlace == data.txtFromPlace || item.toPlace == data.txtToPlace || item.startDateTime==data.txtBoardingDate || item.flightNumber==data.txtFlightNumber;
-    });
-    console.log(this.filteredRecord);
+  PostBlogDetails() {
+    this.blogUserDetails.createdBy = Number(localStorage.getItem('userid'))!;
+    console.log(this.blogUserDetails);
+    this._eventService.SaveNewBlog(this.blogUserDetails).subscribe(res => this.SuccessGet(res), err => (console.log(err),this.ErrorGet(err)));
+    //this._auth.registerUser(this.registerUserData).subscribe(res=>this.SuccessGet(res),res=>this.ErrorGet(res));  
+    // this.filteredRecord = this.SearchAirlineList.filter(function (item) {
+    //   return item.fromPlace == data.txtFromPlace || item.toPlace == data.txtToPlace || item.startDateTime==data.txtBoardingDate || item.flightNumber==data.txtFlightNumber;
+    // });
+    // console.log(this.filteredRecord);
     //this.tblShow = true;
   }
 
-  GoToBookFlight(flightDetails:any){
-    this.filterPanelService.data = flightDetails;
-    this._router.navigate(['/bookflight']);   
+  SuccessGet(res:any){
+    Swal.fire({  
+      position: 'center',  
+      icon: 'success',  
+      text: 'Blog Added Successfully!'
+    })
+    this._router.navigate(['/viewblog'])
+   // this.registerUserData=new UserData();  
   }
+  ErrorGet(res:any){
+    console.log(res);   
+    Swal.fire({  
+      position: 'center',  
+      icon: 'error',  
+      title: 'Oops...',  
+      text: 'Something went wrong!'
+    })  
+  }
+  // GoToBookFlight(flightDetails:any){
+  //   this.filterPanelService.data = flightDetails;
+  //   this._router.navigate(['/bookflight']);   
+  // }
 
 }

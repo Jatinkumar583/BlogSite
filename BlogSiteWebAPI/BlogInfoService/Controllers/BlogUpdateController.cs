@@ -27,6 +27,12 @@ namespace BlogInfoService.Controllers
             {
                 if (blogDetails != null)
                 {
+                    if (string.IsNullOrEmpty(blogDetails.Id))
+                    {
+                        blogDetails.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+                    }
+                    blogDetails.BlogId= Convert.ToInt32(DateTime.UtcNow.Day + DateTime.UtcNow.Month + DateTime.UtcNow.Year + DateTime.UtcNow.Hour +
+                DateTime.UtcNow.Minute + DateTime.UtcNow.Second);
                     int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
                     if (addBlogStatus == 1)
                     {
