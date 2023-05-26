@@ -36,14 +36,14 @@ namespace BlogInfoService.Controllers
                     int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
                     if (addBlogStatus == 1)
                     {
-                        return Ok("Blog added successfully.");
+                        return Ok();
                     }
                     else
                     {
-                        return BadRequest("Blog not added.");
+                        return BadRequest();
                     }
                 }
-                return BadRequest("Blog not added.");
+                return BadRequest();
             }
             catch (Exception ex)
             {

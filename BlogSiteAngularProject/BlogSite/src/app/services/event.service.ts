@@ -22,7 +22,7 @@ export class EventService {
     }
     SaveNewBlog(data:any){
         console.log("hit the save method");
-        return this.http.post("https://localhost:7039/api/v1.0/blogsite/user/blogs/add",data);
+        return this.http.post<any>("https://localhost:7039/api/v1.0/blogsite/user/blogs/add",data);
     }
     saveNewAirline(data: any) {
         return this.http.post("http://localhost:64350/api/v1.0/flight/airline/register", data);

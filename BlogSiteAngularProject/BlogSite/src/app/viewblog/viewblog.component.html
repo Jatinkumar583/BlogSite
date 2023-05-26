@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="new-card-title">View Blogs</h5>
+        <h5 class="new-card-title">Blogs List</h5>
         <form #searchFlight="ngForm" class="row g-3 needs-validation" novalidate>
             <div *ngFor="let item of blogRecords">
                 <div class="container">
@@ -12,7 +12,9 @@
                         </div> 
                         <div class="col-md-12">
                             <label class="form-label" >Article:</label>
-                            <p class="form-label" >{{item.article}}</p>
+                            <div class="alert alert-secondary" role="alert">
+                              <p class="form-label" >{{item.article}}</p>
+                            </div>                            
                         </div> 
                     </div>
                     <br>
