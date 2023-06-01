@@ -10,3 +10,10 @@
 .thead{
     background-color: darkgray;
 }
+.btnPost{
+    /* font-size: larger; */
+    margin-left: 30%;
+    width: 500%;
+    /* background-color: green; */
+    color: blanchedalmond;
+}

@@ -10,3 +10,9 @@
 .thead{
     background-color: darkgray;
 }
+
+.alert-secondary1 {
+    color: #fff;
+    background-color: #1B436B;
+    border-color: #010814;
+}
