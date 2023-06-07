@@ -1,4 +1,5 @@
-﻿using BlogInfoService.Models;
+﻿using BlogInfoService.Commands;
+using BlogInfoService.Models;
 using BlogInfoService.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -14,10 +15,12 @@ namespace BlogInfoService.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IBlogDetailsService _blogDetailsService;
-        public BlogUpdateController(IConfiguration configuration, IBlogDetailsService blogDetailsService)
+        private readonly IBlogDetailsCommands _blogDetailsCommands;
+        public BlogUpdateController(IConfiguration configuration, IBlogDetailsService blogDetailsService, IBlogDetailsCommands blogDetailsCommands)
         {
             _configuration = configuration;
             _blogDetailsService = blogDetailsService;
+            _blogDetailsCommands = blogDetailsCommands;
         }
         //[HttpPost("user/blogs/add/{blogname}")]
         [HttpPost("user/blogs/add")]
@@ -31,9 +34,10 @@ namespace BlogInfoService.Controllers
                     {
                         blogDetails.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
                     }
-                    blogDetails.BlogId= Convert.ToInt32(DateTime.UtcNow.Day + DateTime.UtcNow.Month + DateTime.UtcNow.Year + DateTime.UtcNow.Hour +
+                    blogDetails.BlogId = Convert.ToInt32(DateTime.UtcNow.Day + DateTime.UtcNow.Month + DateTime.UtcNow.Year + DateTime.UtcNow.Hour +
                 DateTime.UtcNow.Minute + DateTime.UtcNow.Second);
-                    int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
+                    //int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
+                    int addBlogStatus = _blogDetailsCommands.AddBlogData(blogDetails);
                     if (addBlogStatus == 1)
                     {
                         return Ok();
@@ -58,7 +62,8 @@ namespace BlogInfoService.Controllers
         {
             try
             {
-                int deleteStatus = _blogDetailsService.DeleteBlog(blogId);
+                //int deleteStatus = _blogDetailsService.DeleteBlog(blogId);
+                int deleteStatus = _blogDetailsCommands.DeleteBlogData(blogId);
                 if (deleteStatus == 1)
                 {
                     return Ok("Blog delete successfully.");
