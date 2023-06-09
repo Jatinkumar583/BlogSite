@@ -1,4 +1,6 @@
 using BlogSearchService.Models;
+using BlogSearchService.Queries;
+using BlogSearchService.Repositories;
 using BlogSearchService.Services;
 using Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -19,6 +21,10 @@ builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configu
 
 builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
 builder.Services.AddScoped<IBlogDetailsService, BlogDetailsService>();
+builder.Services.AddScoped<IBlogDetailsQueries, BlogDetailsQueries>();
+builder.Services.AddScoped<IUserDetailsQueries, UserDetailsQueries>();
+builder.Services.AddScoped<IBlogDetailsQueriesRepository, BlogDetailsQueriesRepository>();
+builder.Services.AddScoped<IUserDetailsQueriesRepository, UserDetailsQueriesRepository>();
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
