@@ -1,4 +1,6 @@
-﻿using BlogUserCreationService.Models;
+﻿using BlogUserCreationService.Commands;
+using BlogUserCreationService.Models;
+using BlogUserCreationService.Queries;
 using BlogUserCreationService.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -13,10 +15,15 @@ namespace BlogUserCreationService.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IUserRegistrationService _userRegistrationService;
-        public BlogUserRegistration(IConfiguration configuration, IUserRegistrationService userRegistrationService)
+        private readonly IUserRegQueries _userRegistrationQueries;
+        private readonly IUserRegCommands _userRegistrationCommands;
+        public BlogUserRegistration(IConfiguration configuration, IUserRegistrationService userRegistrationService,
+            IUserRegCommands userRegCommands, IUserRegQueries userRegQueries)
         {
             _configuration = configuration;
             _userRegistrationService = userRegistrationService;
+            _userRegistrationCommands = userRegCommands;
+            _userRegistrationQueries = userRegQueries;
         }    
         [HttpPost("user/register")]
         public IActionResult BlogUserRegister(UserRegistration userRegistration)
@@ -29,7 +36,8 @@ namespace BlogUserCreationService.Controllers
                     {
                         userRegistration.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
                     }
-                    int addUser = _userRegistrationService.AddUser(userRegistration);
+                    int addUser = _userRegistrationCommands.AddUserData(userRegistration);
+                    //int addUser = _userRegistrationService.AddUser(userRegistration);
                     if (addUser == 1)
                     {
                         return Ok("User added successfully.");

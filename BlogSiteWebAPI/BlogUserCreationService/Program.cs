@@ -1,4 +1,7 @@
+using BlogUserCreationService.Commands;
 using BlogUserCreationService.Models;
+using BlogUserCreationService.Queries;
+using BlogUserCreationService.Repositories;
 using BlogUserCreationService.Services;
 using Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,6 +21,10 @@ builder.Services.AddSingleton<IBlogStoreDBSetting>(sp => sp.GetRequiredService<I
 builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configuration.GetValue<string>("BlogStoreDBSetting:ConnectionString")));
 
 builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
+builder.Services.AddScoped<IUserRegCommandsRepository, UserRegCommandsRepository>();
+builder.Services.AddScoped<IUserRegQueriesRepository, UserRegQueriesRepository>();
+builder.Services.AddScoped<IUserRegQueries, UserRegQueries>();
+builder.Services.AddScoped<IUserRegCommands, UserRegCommands>();
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

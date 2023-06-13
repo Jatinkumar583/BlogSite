@@ -1,4 +1,6 @@
-﻿using BlogUserCreationService.Models;
+﻿using BlogUserCreationService.Commands;
+using BlogUserCreationService.Models;
+using BlogUserCreationService.Queries;
 using BlogUserCreationService.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +14,15 @@ namespace BlogUserCreationService.Controllers
     {
         private readonly IJWTManagerRepository iJWTManager;
         private readonly IUserRegistrationService _userRegistrationService;
-        public UsersController(IJWTManagerRepository jWTManager,IUserRegistrationService userRegistrationService)
+        private readonly IUserRegQueries _userRegistrationQueries;
+        private readonly IUserRegCommands _userRegistrationCommands;
+        public UsersController(IJWTManagerRepository jWTManager,IUserRegistrationService userRegistrationService,
+            IUserRegQueries userRegistrationQueries, IUserRegCommands userRegistrationCommands)
         {
             iJWTManager = jWTManager;
-            _userRegistrationService= userRegistrationService;
+            _userRegistrationService = userRegistrationService;
+            _userRegistrationQueries = userRegistrationQueries;
+            _userRegistrationCommands = userRegistrationCommands;
         }
 
         [AllowAnonymous]
@@ -42,7 +49,8 @@ namespace BlogUserCreationService.Controllers
             //userdata.UserId= Convert.ToInt32(DateTime.UtcNow.day);
             userdata.CreatedBy= userdata.UserId;
             userdata.CreatedOn= DateTime.UtcNow;
-            _userRegistrationService.AddUser(userdata);
+            _userRegistrationCommands.AddUserData(userdata);
+            //_userRegistrationService.AddUser(userdata);
             return Ok();
         }
 
@@ -53,7 +61,7 @@ namespace BlogUserCreationService.Controllers
         {
             if (user != null)
             {
-                return Ok(_userRegistrationService.GetUserInfo(user));
+                return Ok(_userRegistrationQueries.GetUserDataInfo(user));
             }
             return BadRequest();
 
