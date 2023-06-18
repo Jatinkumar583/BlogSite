@@ -11,15 +11,10 @@ namespace BlogSearchService.Controllers
     [ApiController]
     public class BlogSearchController : ControllerBase
     {
-        private readonly IBlogDetailsService _blogDetailsService; 
-        private readonly IUserRegistrationService _userRegistrationService;
         private readonly IBlogDetailsQueries _blogDetailsQueries;
         private readonly IUserDetailsQueries _userDetailsQueries;
-        public BlogSearchController(IBlogDetailsService blogDetailsService, IUserRegistrationService userRegistrationService
-            ,IBlogDetailsQueries blogDetailsQueries, IUserDetailsQueries userDetailsQueries)
+        public BlogSearchController(IBlogDetailsQueries blogDetailsQueries, IUserDetailsQueries userDetailsQueries)
         {
-            _blogDetailsService = blogDetailsService;
-            _userRegistrationService = userRegistrationService;
             _blogDetailsQueries = blogDetailsQueries;
             _userDetailsQueries = userDetailsQueries;
         }
@@ -30,7 +25,6 @@ namespace BlogSearchService.Controllers
             {
                 if (category!=null)
                 {
-                    //return Ok(_blogDetailsService.GetAllBlogsByCategory(category));
                     return Ok(_blogDetailsQueries.GetAllBlogsDataByCategory(category));
                 }
                 else
@@ -49,7 +43,6 @@ namespace BlogSearchService.Controllers
         {
             try
             {
-                //return Ok(_blogDetailsService.GetAllBlogsByUserId(userId));
                 return Ok(_blogDetailsQueries.GetAllBlogsDataByUserId(userId));
             }
             catch (Exception ex)
@@ -64,7 +57,6 @@ namespace BlogSearchService.Controllers
             try
             {
                 return Ok(_userDetailsQueries.GetAllUsersData());
-                //return Ok(_userRegistrationService.GetAllUsers());
             }
             catch (Exception ex)
             {

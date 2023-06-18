@@ -21,7 +21,6 @@ builder.Services.AddSingleton<IBlogStoreDBSetting>(sp => sp.GetRequiredService<I
 
 builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configuration.GetValue<string>("BlogStoreDBSetting:ConnectionString")));
 
-builder.Services.AddScoped<IBlogDetailsService, BlogDetailsService>();
 builder.Services.AddScoped<IBlogDetailsCommandsRepository, BlogDetailsCommandsRepository>();
 builder.Services.AddScoped<IBlogDetailsCommands, BlogDetailsCommands>();
 builder.Services.AddAuthentication(x =>

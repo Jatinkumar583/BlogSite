@@ -14,14 +14,11 @@ namespace BlogUserCreationService.Controllers
     public class BlogUserRegistration : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly IUserRegistrationService _userRegistrationService;
         private readonly IUserRegQueries _userRegistrationQueries;
         private readonly IUserRegCommands _userRegistrationCommands;
-        public BlogUserRegistration(IConfiguration configuration, IUserRegistrationService userRegistrationService,
-            IUserRegCommands userRegCommands, IUserRegQueries userRegQueries)
+        public BlogUserRegistration(IConfiguration configuration,IUserRegCommands userRegCommands, IUserRegQueries userRegQueries)
         {
             _configuration = configuration;
-            _userRegistrationService = userRegistrationService;
             _userRegistrationCommands = userRegCommands;
             _userRegistrationQueries = userRegQueries;
         }    
@@ -37,7 +34,6 @@ namespace BlogUserCreationService.Controllers
                         userRegistration.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
                     }
                     int addUser = _userRegistrationCommands.AddUserData(userRegistration);
-                    //int addUser = _userRegistrationService.AddUser(userRegistration);
                     if (addUser == 1)
                     {
                         return Ok("User added successfully.");

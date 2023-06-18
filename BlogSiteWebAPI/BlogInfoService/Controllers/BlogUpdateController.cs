@@ -14,15 +14,13 @@ namespace BlogInfoService.Controllers
     public class BlogUpdateController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly IBlogDetailsService _blogDetailsService;
         private readonly IBlogDetailsCommands _blogDetailsCommands;
-        public BlogUpdateController(IConfiguration configuration, IBlogDetailsService blogDetailsService, IBlogDetailsCommands blogDetailsCommands)
+        public BlogUpdateController(IConfiguration configuration,IBlogDetailsCommands blogDetailsCommands)
         {
             _configuration = configuration;
-            _blogDetailsService = blogDetailsService;
             _blogDetailsCommands = blogDetailsCommands;
         }
-        //[HttpPost("user/blogs/add/{blogname}")]
+        
         [HttpPost("user/blogs/add")]
         public IActionResult AddBlog(BlogDetails blogDetails)
         {
@@ -36,7 +34,6 @@ namespace BlogInfoService.Controllers
                     }
                     blogDetails.BlogId = Convert.ToInt32(DateTime.UtcNow.Day + DateTime.UtcNow.Month + DateTime.UtcNow.Year + DateTime.UtcNow.Hour +
                 DateTime.UtcNow.Minute + DateTime.UtcNow.Second);
-                    //int addBlogStatus = _blogDetailsService.AddBlog(blogDetails);
                     int addBlogStatus = _blogDetailsCommands.AddBlogData(blogDetails);
                     if (addBlogStatus == 1)
                     {
@@ -56,13 +53,11 @@ namespace BlogInfoService.Controllers
 
         }
 
-        //[HttpDelete("user/delete/{blogname}")]
         [HttpDelete("user/delete")]
         public IActionResult DeleteBlog(int blogId)
         {
             try
             {
-                //int deleteStatus = _blogDetailsService.DeleteBlog(blogId);
                 int deleteStatus = _blogDetailsCommands.DeleteBlogData(blogId);
                 if (deleteStatus == 1)
                 {
